@@ -3,7 +3,7 @@ package com.trainer.currencyrest;
 import java.util.List;
 import java.util.Arrays;
 
-
+import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
@@ -36,13 +36,20 @@ public class CurrencyResource {
 		
 	}
 	
-	
 	@POST
-	@Path("Create")
-	public Currency createCurrency(Currency curr1){
-		
-		System.out.println(curr1);
-		repo.create(curr1);
-		return curr1;
+	@Consumes(MediaType.APPLICATION_JSON)
+	@Produces(MediaType.APPLICATION_JSON)
+	public Currency addMessage(Currency currency){
+		 repo.create(currency);
+		 return currency;
 	}
+	
+	//@POST
+	//@Path("Create")
+	//public Currency createCurrency(Currency curr1){
+		
+	//	System.out.println(curr1);
+	//	repo.create(curr1);
+	//	return curr1;
+	//}
 }
