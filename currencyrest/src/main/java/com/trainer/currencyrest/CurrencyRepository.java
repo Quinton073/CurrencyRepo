@@ -2,8 +2,10 @@ package com.trainer.currencyrest;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import com.trainer.currencyrest.dbUtil.dbConnection;
+
 import java.sql.*;
-import dbUtil.dbConnection;
 
 public class CurrencyRepository {
 

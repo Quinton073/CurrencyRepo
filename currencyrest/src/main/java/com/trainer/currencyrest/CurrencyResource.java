@@ -39,8 +39,10 @@ public class CurrencyResource {
 	@POST
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
-	public Currency addMessage(Currency currency){
-		 repo.create(currency);
+	public Currency convertCurrency(Currency currency){
+		 //repo.create(currency);
+		 
+		System.out.println("run for your life");
 		 return currency;
 	}
 	

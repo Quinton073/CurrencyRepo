@@ -1,20 +1,37 @@
-package com.trainer.currencyrest;
+package com.trainer.currencyrest.model;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
-public class Currency
-{
+public class Currency {
+	
+	private long id;
 	private String currencyCode;
-	public String currencyName;
+	private String currencyName;
 	
-	public Currency(){}
+	//there no argument constructor
+	public Currency(){
+		
+	}
 	
-	public Currency(String currencyCode, String currencyName) {
+	
+	//parameterized constr. lets us create new instance of the currency class
+	public Currency(long id, String currencyCode, String currencyName) {
 		super();
 		this.currencyCode = currencyCode;
 		this.currencyName = currencyName;
+		this.id = id;
+		
 	}
+	
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
 	public String getCurrencyCode() {
 		return currencyCode;
 	}
@@ -26,10 +43,6 @@ public class Currency
 	}
 	public void setCurrencyName(String currencyName) {
 		this.currencyName = currencyName;
-	}
-	@Override
-	public String toString() {
-		return "Currency [currencyCode=" + currencyCode + ", currencyName=" + currencyName + "]";
 	}
 	
 	

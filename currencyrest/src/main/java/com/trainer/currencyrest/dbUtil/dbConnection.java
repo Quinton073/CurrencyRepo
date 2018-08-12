@@ -1,4 +1,4 @@
-package dbUtil;
+package com.trainer.currencyrest.dbUtil;
 
 import java.sql.*;
 
